@@ -1,0 +1,40 @@
+group 'org.researchgroup'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlinVersion = '1.2.30'
+    ext.neo4jVersion = '3.3.4'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+
+//noinspection GroovyUnusedAssignment
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.neo4j:neo4j:$neo4jVersion"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    compile group: 'org.eclipse.jgit', name: 'org.eclipse.jgit', version: '4.11.0.201803080745-r'
+
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+
+    testCompile group: 'org.neo4j', name: 'neo4j-kernel', version: "$neo4jVersion", classifier: 'tests'
+    testCompile group: 'org.neo4j', name: 'neo4j-io', version: "$neo4jVersion", classifier: 'tests'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "2.7"
+}

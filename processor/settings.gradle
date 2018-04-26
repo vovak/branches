@@ -1,0 +1,4 @@
+rootProject.name = 'gerrit-loader'
+
+include(':git2neo')
+project(':git2neo').projectDir = new File(settingsDir, '../git2neo')

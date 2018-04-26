@@ -1,0 +1,10 @@
+hudson/org.eclipse.hudson.core
+efxclipse/org.eclipse.efxclipse
+recommenders/org.eclipse.recommenders
+www.eclipse.org/downloads
+tcf/org.eclipse.tcf
+epp/org.eclipse.epp.packages
+platform/eclipse.platform.releng
+swtbot/org.eclipse.swtbot
+acceleo/org.eclipse.acceleo
+chemclipse/org.eclipse.chemclipse.chemclipsecore
